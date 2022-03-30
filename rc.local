@@ -1,0 +1,4 @@
+touch /var/lock/subsys/local
+/run_after_boot.sh
+echo 1000000 > /proc/sys/kernel/pid_max
+    echo 1 > /sys/kernel/mm/ksm/run
