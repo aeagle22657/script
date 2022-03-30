@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt-get update
-RUN apt-get install -y -qq git python python-dev
+RUN apt-get install -y -qq git python python-dev pip
 RUN pip install shutit
 
 WORKDIR /opt
