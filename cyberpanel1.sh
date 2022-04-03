@@ -1295,7 +1295,7 @@ sed -i 's|wget -O -  https://get.acme.sh \| sh|echo acme|g' install.py
 sed -i 's|/root/.acme.sh/acme.sh --upgrade --auto-upgrade|echo acme2|g' install.py
 
 Current_Dir=$(pwd)
-Retry_Command "git clone -depth 1 https://gitee.com/neilpang/acme.sh.git"
+Retry_Command "git clone --depth 1 https://gitee.com/neilpang/acme.sh.git"
 cd acme.sh || exit
 ./acme.sh --install
 cd "$Current_Dir" || exit
@@ -1331,7 +1331,7 @@ if [[ $Server_Edition = "Enterprise" ]] ; then
   Enterprise_Flag="--ent ent --serial "
 fi
 
-sed -i 's|git clone -depth 1 https://github.com/usmannasir/cyberpanel|echo downloaded|g' install.py
+sed -i 's|git clone --depth 1 https://github.com/usmannasir/cyberpanel|echo downloaded|g' install.py
 sed -i 's|mirror.cyberpanel.net|cyberpanel.sh|g' install.py
 
 
@@ -1342,7 +1342,7 @@ else
   sed -i 's|/root/.acme.sh/acme.sh --upgrade --auto-upgrade|echo acme2|g' install.py
 
   Current_Dir=$(pwd)
-  Retry_Command "git clone -depth 1 https://github.com/acmesh-official/acme.sh.git"
+  Retry_Command "git clone --depth 1 https://github.com/acmesh-official/acme.sh.git"
   cd acme.sh || exit
   ./acme.sh --install
   cd "$Current_Dir" || exit
